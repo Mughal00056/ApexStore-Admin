@@ -1,0 +1,6 @@
+{
+  "name": "ApexStore · Power Admin (Firebase)",
+  "description": "ApexStore Power Admin dashboard with real-time Firebase sync, products, launch control, receipts, and order processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
