@@ -25,6 +25,7 @@ import {
 } from '../lib/firebase';
 import { Sidebar, TabKey } from './components/AdminSidebar';
 import { AdminHeader } from './components/AdminHeader';
+import { AdminTheme, ADMIN_THEMES } from './theme';
 
 // Tabs
 import { DashboardTab } from './components/DashboardTab';
@@ -77,6 +78,26 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onSwitchToStoref
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [syncStatus, setSyncStatus] = useState<'synced' | 'saving' | 'offline' | 'error'>('saving');
   const [toasts, setToasts] = useState<Toast[]>([]);
+
+  // Admin Theme state (defaults to cyber - Bittp Dark Neon)
+  const [adminTheme, setAdminTheme] = useState<AdminTheme>(() => {
+    try {
+      const saved = localStorage.getItem('apex_admin_theme') as AdminTheme;
+      if (saved && ADMIN_THEMES[saved]) return saved;
+    } catch {
+      // ignore
+    }
+    return 'cyber';
+  });
+
+  const handleSelectTheme = (theme: AdminTheme) => {
+    setAdminTheme(theme);
+    try {
+      localStorage.setItem('apex_admin_theme', theme);
+    } catch {
+      // ignore
+    }
+  };
 
   // Modals state
   const [productModalOpen, setProductModalOpen] = useState(false);

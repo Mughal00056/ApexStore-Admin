@@ -339,3 +339,149 @@ img {
   color: #fca5a5;
   box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
 }
+
+/* ================= ADMIN THEMES & STYLING ================= */
+.admin-theme-cyber {
+  --admin-bg: #0a0a0f;
+  --admin-surface: #12121e;
+  --admin-surface-hover: #19192b;
+  --admin-border: #23233b;
+  --admin-text: #f8fafc;
+  --admin-muted: #94a3b8;
+  --admin-accent: #a855f7;
+  color-scheme: dark;
+}
+
+.admin-theme-obsidian {
+  --admin-bg: #030712;
+  --admin-surface: #0a101d;
+  --admin-surface-hover: #101827;
+  --admin-border: #1f2937;
+  --admin-text: #ffffff;
+  --admin-muted: #9ca3af;
+  --admin-accent: #10b981;
+  color-scheme: dark;
+}
+
+.admin-theme-slate {
+  --admin-bg: #0f172a;
+  --admin-surface: #1e293b;
+  --admin-surface-hover: #293548;
+  --admin-border: #334155;
+  --admin-text: #f1f5f9;
+  --admin-muted: #94a3b8;
+  --admin-accent: #38bdf8;
+  color-scheme: dark;
+}
+
+.admin-theme-light {
+  --admin-bg: #f8fafc;
+  --admin-surface: #ffffff;
+  --admin-surface-hover: #f1f5f9;
+  --admin-border: #e2e8f0;
+  --admin-text: #0f172a;
+  --admin-muted: #64748b;
+  --admin-accent: #4f46e5;
+  color-scheme: light;
+}
+
+/* Apply Admin Theming to dark themes */
+.admin-theme-cyber,
+.admin-theme-obsidian,
+.admin-theme-slate {
+  background-color: var(--admin-bg) !important;
+  color: var(--admin-text) !important;
+}
+
+.admin-theme-cyber .admin-card,
+.admin-theme-cyber .bg-white,
+.admin-theme-cyber aside,
+.admin-theme-cyber header,
+.admin-theme-obsidian .admin-card,
+.admin-theme-obsidian .bg-white,
+.admin-theme-obsidian aside,
+.admin-theme-obsidian header,
+.admin-theme-slate .admin-card,
+.admin-theme-slate .bg-white,
+.admin-theme-slate aside,
+.admin-theme-slate header {
+  background-color: var(--admin-surface) !important;
+  border-color: var(--admin-border) !important;
+  color: var(--admin-text) !important;
+}
+
+.admin-theme-cyber .text-slate-900,
+.admin-theme-cyber .text-slate-800,
+.admin-theme-obsidian .text-slate-900,
+.admin-theme-obsidian .text-slate-800,
+.admin-theme-slate .text-slate-900,
+.admin-theme-slate .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+.admin-theme-cyber .text-slate-500,
+.admin-theme-cyber .text-slate-600,
+.admin-theme-cyber .text-slate-700,
+.admin-theme-obsidian .text-slate-500,
+.admin-theme-obsidian .text-slate-600,
+.admin-theme-obsidian .text-slate-700,
+.admin-theme-slate .text-slate-500,
+.admin-theme-slate .text-slate-600,
+.admin-theme-slate .text-slate-700 {
+  color: #94a3b8 !important;
+}
+
+.admin-theme-cyber .border-slate-100,
+.admin-theme-cyber .border-slate-200,
+.admin-theme-cyber .border-slate-300,
+.admin-theme-obsidian .border-slate-100,
+.admin-theme-obsidian .border-slate-200,
+.admin-theme-obsidian .border-slate-300,
+.admin-theme-slate .border-slate-100,
+.admin-theme-slate .border-slate-200,
+.admin-theme-slate .border-slate-300 {
+  border-color: var(--admin-border) !important;
+}
+
+.admin-theme-cyber .bg-slate-50,
+.admin-theme-cyber .bg-slate-100,
+.admin-theme-obsidian .bg-slate-50,
+.admin-theme-obsidian .bg-slate-100,
+.admin-theme-slate .bg-slate-50,
+.admin-theme-slate .bg-slate-100 {
+  background-color: var(--admin-surface-hover) !important;
+}
+
+.admin-theme-cyber input,
+.admin-theme-cyber select,
+.admin-theme-cyber textarea,
+.admin-theme-obsidian input,
+.admin-theme-obsidian select,
+.admin-theme-obsidian textarea,
+.admin-theme-slate input,
+.admin-theme-slate select,
+.admin-theme-slate textarea {
+  background-color: var(--admin-bg) !important;
+  border-color: var(--admin-border) !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar navigation */
+.sidebar-link {
+  transition: all 0.2s ease;
+}
+.sidebar-link:hover {
+  background-color: var(--admin-surface-hover, rgba(99, 102, 241, 0.08));
+}
+.sidebar-link.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.3)) !important;
+  border: 1px solid rgba(168, 85, 247, 0.5) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(124, 58, 237, 0.25);
+}
+.admin-theme-light .sidebar-link.active {
+  background: linear-gradient(135deg, #ede9fe, #e0e7ff) !important;
+  border: 1px solid #c7d2fe !important;
+  color: #4338ca !important;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.15);
+}
