@@ -2,6 +2,7 @@ import React from 'react';
 
 export type TabKey =
   | 'dashboard'
+  | 'features'
   | 'products'
   | 'heroimages'
   | 'categories'
@@ -99,6 +100,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
               >
                 <i className="fa-solid fa-chart-pie w-5 text-indigo-600"></i>
                 <span className="font-bold text-xs sm:text-sm">Dashboard</span>
+              </button>
+
+              <button
+                onClick={() => handleNav('features')}
+                className={`sidebar-link w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-xl text-left ${
+                  currentTab === 'features' ? 'active' : 'text-slate-700'
+                }`}
+              >
+                <i className="fa-solid fa-toggle-on w-5 text-emerald-500"></i>
+                <span className="font-bold text-xs sm:text-sm">Feature Toggles</span>
+                <span className="ml-auto bg-emerald-100 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-full">
+                  NEW
+                </span>
               </button>
 
               <button

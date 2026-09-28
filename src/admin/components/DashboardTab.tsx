@@ -1,7 +1,7 @@
 import React from 'react';
 import { StoreState, Order } from '../../types/store';
 import { formatPKR, timeAgo } from '../../lib/format';
-import { TabKey } from '../Sidebar';
+import { TabKey } from './AdminSidebar';
 
 interface DashboardTabProps {
   state: StoreState;

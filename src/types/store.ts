@@ -1,3 +1,5 @@
+import { FeatureToggles, DEFAULT_FEATURE_TOGGLES } from '../types';
+
 export type OrderStatus = 'pending' | 'processing' | 'verified' | 'rejected';
 
 export type ProductLayoutType = 'horizontal' | 'vertical' | 'compact' | 'featured';
@@ -162,5 +164,6 @@ export interface StoreState {
   transcriptSettings: TranscriptSettings;
   storeSettings?: StoreSettings;
   announcementSettings?: AnnouncementSettings;
+  featureToggles?: FeatureToggles;
   updatedAt?: number;
 }
